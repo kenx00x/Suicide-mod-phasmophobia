@@ -1,6 +1,5 @@
 ﻿using MelonLoader;
 using UnityEngine.InputSystem;
-
 namespace Suicide
 {
     public class Main : MelonMod
@@ -8,7 +7,6 @@ namespace Suicide
         InputAction SuicideAction = new InputAction("Suicide", binding: "<Keyboard>/p");
         public override void OnUpdate()
         {
-            base.OnUpdate();
             if (SuicideAction.triggered)
             {
                 MelonLogger.Log("suicide");
@@ -21,7 +19,6 @@ namespace Suicide
         }
         public override void OnApplicationStart()
         {
-            base.OnApplicationStart();
             MelonLogger.Log("Suicide mod loaded!");
             SuicideAction.Enable();
         }
