@@ -14,6 +14,7 @@ namespace Suicide
                 MelonLogger.Log("suicide");
                 Player localplayer = GameController.instance.myPlayer.player;
                 localplayer.StartKillingPlayerNetworked();
+                //currently the dead body doesnt spawn :(
                 localplayer.SpawnDeadBody();
                 localplayer.KillPlayer();
             }
