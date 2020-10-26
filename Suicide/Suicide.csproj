@@ -53,6 +53,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\steamapps\common\Phasmophobia\MelonLoader\Managed\Photon3Unity3D.dll</HintPath>
     </Reference>
+    <Reference Include="PhotonRealtime, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="PhotonUnityNetworking, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\steamapps\common\Phasmophobia\MelonLoader\Managed\PhotonUnityNetworking.dll</HintPath>
