@@ -4,14 +4,16 @@ namespace Suicide
 {
     public class Main : MelonMod
     {
-        InputAction SuicideAction = new InputAction("Suicide", binding: "<Keyboard>/p");
+        readonly InputAction SuicideAction = new InputAction("Suicide", binding: "<Keyboard>/p");
         public override void OnUpdate()
         {
             if (SuicideAction.triggered)
             {
                 MelonLogger.Log("suicide");
-                Player localplayer = GameController.instance.myPlayer.player;
-                localplayer.StartCoroutine_Auto(localplayer.SpawnDeadBody());
+                //old unobfuscated code
+                //Player localplayer = GameController.instance.myPlayer.player;
+                Player localplayer = Helpers.GetLocalPlayer();
+                localplayer.StartCoroutine_Auto(localplayer.Method_Private_IEnumerator_PDM_0());
                 localplayer.StartKillingPlayerNetworked();
                 localplayer.KillPlayer();
             }
