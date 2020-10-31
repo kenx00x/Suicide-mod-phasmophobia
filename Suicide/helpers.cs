@@ -1,10 +1,8 @@
 ﻿//thx to OFWModz for making this code
 //https://github.com/OFWModz
-
 using System.Collections.Generic;
 using System.Linq;
 using Object = UnityEngine.Object;
-
 namespace Suicide
 {
     public class Helpers
@@ -12,7 +10,6 @@ namespace Suicide
         public static Player GetLocalPlayer()
         {
             List<Player> players = GetAllPlayers();
-
             if (players == null || players.Count == 0)
             {
                 return null;
@@ -25,26 +22,17 @@ namespace Suicide
             {
                 foreach (Player player in players)
                 {
-                    if (player != null)
+                    if (player != null && player.field_Public_PhotonView_0 != null && player.field_Public_PhotonView_0.AmOwner)
                     {
-                        if (player.field_Public_PhotonView_0 != null)
-                        {
-                            if (player.field_Public_PhotonView_0.AmOwner)
-                            {
-                                return player;
-                            }
-                        }
+                        return player;
                     }
                 }
-
                 return null;
             }
         }
-
         public static List<Player> GetAllPlayers()
         {
             Player[] players = Object.FindObjectsOfType<Player>();
-
             if (players == null || players.Length == 0)
             {
                 return null;
