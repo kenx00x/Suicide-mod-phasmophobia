@@ -14,7 +14,7 @@ using MelonLoader;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: MelonInfo(typeof(Suicide.Main), "Suicide", "1.1.0", "kenx00x")]
+[assembly: MelonInfo(typeof(Suicide.Main), "Suicide", "2.0.0", "kenx00x")]
 [assembly: MelonGame("Kinetic Games", "Phasmophobia")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
