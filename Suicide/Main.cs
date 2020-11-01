@@ -7,12 +7,12 @@ namespace Suicide
         readonly InputAction SuicideAction = new InputAction("Suicide", binding: "<Keyboard>/p");
         public override void OnUpdate()
         {
-            if (SuicideAction.triggered)
+            Player localplayer = Helpers.GetLocalPlayer();
+            if (SuicideAction.triggered && !localplayer.field_Public_Boolean_1)
             {
                 MelonLogger.Log("suicide");
                 //old unobfuscated code
                 //Player localplayer = GameController.instance.myPlayer.player;
-                Player localplayer = Helpers.GetLocalPlayer();
                 localplayer.StartCoroutine_Auto(localplayer.Method_Private_IEnumerator_PDM_0());
                 localplayer.StartKillingPlayerNetworked();
                 localplayer.KillPlayer();
